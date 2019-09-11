@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(fontawesome-all.min.css);
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -146,7 +145,38 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
 }
-.sidebarTitle {
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 25%;
+  border: 1px solid black;
+  color: white;
+  background-color: #333333;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sidebarSection {
+  margin-bottom: 20%;
+  font-size: 1.5rem;
+  width: 85%;
+}
+.sidebarSection:first-child {
+  display: flex;
+  margin-top: 10%;
+  justify-content: flex-start;
+}
+.sidebarSection:first-child img {
+  border: 3px solid grey;
+  border-radius: 50%;
+  width: 85%;
+  background-color: #f0eef0;
+}
+.sidebarSection address {
+  display: flex;
+  flex-direction: column;
+}
+.sidebarSection .sidebarTitle {
   font-weight: bold;
   font-size: 3rem;
 }
