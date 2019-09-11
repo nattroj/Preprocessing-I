@@ -139,11 +139,17 @@ table {
 }
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
+}
+.flexContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 .sidebar {
   display: flex;
@@ -152,7 +158,6 @@ html {
   border: 1px solid black;
   color: white;
   background-color: #333333;
-  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -176,7 +181,62 @@ html {
   display: flex;
   flex-direction: column;
 }
+.sidebarSection * span {
+  padding: 3% 0;
+}
 .sidebarSection .sidebarTitle {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+.mainContent {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+.profile .bigName {
+  font-weight: bold;
+  margin-top: 10%;
+  font-size: 8rem;
+}
+.profile .jobTitle {
+  margin-top: 2.5%;
+  font-size: 4rem;
+  font-style: italic;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 2.5%;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.experience .titleContainer {
+  background-color: lightgrey;
+  margin-bottom: 2.5%;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.experience .titleContainer .expTitle {
+  padding-left: 2.5%;
+}
+.experience div {
+  display: flex;
+  padding-left: 2.5%;
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+}
+.experience div span {
+  font-weight: bold;
+}
+.experience div p {
+  margin-left: 15%;
 }
