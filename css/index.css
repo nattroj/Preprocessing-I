@@ -200,6 +200,8 @@ html {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
+  height: 30%;
+  margin-bottom: 5%;
 }
 .profile .bigName {
   font-weight: bold;
@@ -211,32 +213,44 @@ html {
   font-size: 4rem;
   font-style: italic;
 }
-.experience {
+.achievementsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 90%;
-  margin-top: 2.5%;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
+  height: 30%;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
-.experience .titleContainer {
-  background-color: lightgrey;
-  margin-bottom: 2.5%;
-  font-weight: bold;
-  font-size: 2.5rem;
-}
-.experience .titleContainer .expTitle {
-  padding-left: 2.5%;
-}
-.experience div {
+.achievementsContainer .titleContainer {
   display: flex;
-  padding-left: 2.5%;
-  margin-bottom: 1%;
-  font-size: 1.5rem;
+  align-items: center;
+  background-color: lightgrey;
+  font-size: 2.7rem;
+  height: 30%;
 }
-.experience div span {
-  font-weight: bold;
+.achievementsContainer .titleContainer .expTitle {
+  padding-left: 3%;
 }
-.experience div p {
-  margin-left: 15%;
+.achievementsContainer .achievements {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+.achievementsContainer .achievements div {
+  display: flex;
+  justify-content: space-between;
+}
+.achievementsContainer .achievements div .season {
+  padding-left: 3%;
+  width: 30%;
+}
+.achievementsContainer .achievements div .season span {
+  font-style: italic;
+}
+.achievementsContainer .achievements div .achievement {
+  width: 70%;
+  text-align: left;
 }
