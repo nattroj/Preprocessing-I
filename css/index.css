@@ -142,6 +142,13 @@ body {
   height: 100vh;
   width: 100vw;
 }
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+}
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
@@ -214,7 +221,6 @@ html {
   }
 }
 .mainContent {
-  height: 100%;
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -225,7 +231,6 @@ html {
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  height: 30%;
   margin-bottom: 3%;
 }
 .profile .bigName {
@@ -243,7 +248,6 @@ html {
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  height: 25%;
   margin-bottom: 3%;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
@@ -261,7 +265,6 @@ html {
 .mainContentSection .schools,
 .mainContentSection .quirk {
   display: flex;
-  height: 100%;
   flex-direction: column;
   justify-content: space-around;
   font-size: 1.5rem;
@@ -269,6 +272,7 @@ html {
 .mainContentSection .achievements div,
 .mainContentSection .schools div,
 .mainContentSection .quirk div {
+  padding: 1% 0%;
   display: flex;
   justify-content: space-between;
 }
@@ -306,10 +310,4 @@ html {
 .mainContentSection .quirk div .qDesc {
   width: 70%;
   text-align: left;
-}
-.educationContainer {
-  height: 10%;
-}
-.skillsContainer {
-  height: 60%;
 }
