@@ -140,14 +140,7 @@ table {
 html,
 body {
   height: 100vh;
-  width: 100vw;
-}
-@media screen and (max-width: 800px) {
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
+  width: 100%;
 }
 html {
   font-size: 62.5%;
@@ -158,7 +151,7 @@ html {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .flexContainer {
     flex-direction: column;
   }
@@ -166,17 +159,15 @@ html {
 .sidebar {
   display: flex;
   flex-flow: column nowrap;
-  width: 25%;
   border: 1px solid black;
   color: white;
   background-color: #333333;
   align-items: center;
   height: 100%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .sidebar {
     width: 100%;
-    height: 25%;
     flex-direction: row;
     align-items: flex-start;
   }
@@ -197,7 +188,7 @@ html {
   width: 85%;
   background-color: #f0eef0;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .sidebarSection:first-child {
     margin-top: 2%;
   }
@@ -215,7 +206,7 @@ html {
   font-weight: bold;
   font-size: 2.5rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .sidebarSection {
     margin-top: 3%;
   }
@@ -248,7 +239,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
 }
