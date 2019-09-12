@@ -151,6 +151,11 @@ html {
   height: 100%;
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  .flexContainer {
+    flex-direction: column;
+  }
+}
 .sidebar {
   display: flex;
   flex-flow: column nowrap;
@@ -161,8 +166,16 @@ html {
   align-items: center;
   height: 100%;
 }
+@media screen and (max-width: 800px) {
+  .sidebar {
+    width: 100%;
+    height: 25%;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
 .sidebarSection {
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   font-size: 1.5rem;
   width: 85%;
 }
@@ -177,16 +190,28 @@ html {
   width: 85%;
   background-color: #f0eef0;
 }
-.sidebarSection address {
+@media screen and (max-width: 800px) {
+  .sidebarSection:first-child {
+    margin-top: 2%;
+  }
+}
+.sidebarSection address,
+.sidebarSection .reference {
   display: flex;
   flex-direction: column;
 }
-.sidebarSection * span {
+.sidebarSection address span,
+.sidebarSection .reference span {
   padding: 3% 0;
 }
 .sidebarSection .sidebarTitle {
   font-weight: bold;
   font-size: 2.5rem;
+}
+@media screen and (max-width: 800px) {
+  .sidebarSection {
+    margin-top: 3%;
+  }
 }
 .mainContent {
   height: 100%;
@@ -201,11 +226,11 @@ html {
   align-items: flex-start;
   width: 90%;
   height: 30%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 .profile .bigName {
   font-weight: bold;
-  margin-top: 10%;
+  margin-top: 5%;
   font-size: 8rem;
 }
 .profile .jobTitle {
@@ -213,44 +238,78 @@ html {
   font-size: 4rem;
   font-style: italic;
 }
-.achievementsContainer {
+.mainContentSection {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
-  height: 30%;
+  height: 25%;
+  margin-bottom: 3%;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
 }
-.achievementsContainer .titleContainer {
+.mainContentSection .titleContainer {
   display: flex;
   align-items: center;
   background-color: lightgrey;
   font-size: 2.7rem;
-  height: 30%;
 }
-.achievementsContainer .titleContainer .expTitle {
+.mainContentSection .titleContainer .title {
   padding-left: 3%;
 }
-.achievementsContainer .achievements {
+.mainContentSection .achievements,
+.mainContentSection .schools,
+.mainContentSection .quirk {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
-.achievementsContainer .achievements div {
+.mainContentSection .achievements div,
+.mainContentSection .schools div,
+.mainContentSection .quirk div {
   display: flex;
   justify-content: space-between;
 }
-.achievementsContainer .achievements div .season {
+.mainContentSection .achievements div .season,
+.mainContentSection .schools div .season,
+.mainContentSection .quirk div .season,
+.mainContentSection .achievements div .year,
+.mainContentSection .schools div .year,
+.mainContentSection .quirk div .year,
+.mainContentSection .achievements div .qName,
+.mainContentSection .schools div .qName,
+.mainContentSection .quirk div .qName {
   padding-left: 3%;
   width: 30%;
 }
-.achievementsContainer .achievements div .season span {
+.mainContentSection .achievements div .season span,
+.mainContentSection .schools div .season span,
+.mainContentSection .quirk div .season span,
+.mainContentSection .achievements div .year span,
+.mainContentSection .schools div .year span,
+.mainContentSection .quirk div .year span,
+.mainContentSection .achievements div .qName span,
+.mainContentSection .schools div .qName span,
+.mainContentSection .quirk div .qName span {
   font-style: italic;
 }
-.achievementsContainer .achievements div .achievement {
+.mainContentSection .achievements div .achievement,
+.mainContentSection .schools div .achievement,
+.mainContentSection .quirk div .achievement,
+.mainContentSection .achievements div .school,
+.mainContentSection .schools div .school,
+.mainContentSection .quirk div .school,
+.mainContentSection .achievements div .qDesc,
+.mainContentSection .schools div .qDesc,
+.mainContentSection .quirk div .qDesc {
   width: 70%;
   text-align: left;
+}
+.educationContainer {
+  height: 10%;
+}
+.skillsContainer {
+  height: 60%;
 }

@@ -154,6 +154,9 @@ html {
 	display: flex;
 	height: 100%;
 	width: 100%;
+	@media screen and (max-width: 800px) {
+		flex-direction: column;
+	}
 }
 
 .sidebar {
@@ -165,10 +168,17 @@ html {
 	background-color: #333333;
 	align-items: center;
 	height: 100%;
+
+	@media screen and (max-width: 800px) {
+		width: 100%;
+		height: 25%;
+		flex-direction: row;
+		align-items: flex-start;
+	}
 }
 
 .sidebarSection {
-	margin-bottom: 20%;
+	margin-bottom: 10%;
 	font-size: 1.5rem;
 	width: 85%;
 
@@ -184,20 +194,30 @@ html {
 			width: 85%;
 			background-color: #f0eef0;
 		}
+
+		@media screen and (max-width: 800px) {
+			margin-top: 2%;
+		}
 	}
 
-	address {
+	address,
+	.reference {
 		display: flex;
 		flex-direction: column;
 	}
 
-	* span {
+	address span,
+	.reference span {
 		padding: 3% 0;
 	}
 
 	.sidebarTitle {
 		font-weight: bold;
 		font-size: 2.5rem;
+	}
+
+	@media screen and (max-width: 800px) {
+		margin-top: 3%;
 	}
 }
 
@@ -218,11 +238,11 @@ html {
 	align-items: flex-start;
 	width: 90%;
 	height: 30%;
-	margin-bottom: 5%;
+	margin-bottom: 3%;
 
 	.bigName {
 		font-weight: bold;
-		margin-top: 10%;
+		margin-top: 5%;
 		font-size: 8rem;
 	}
 
@@ -233,13 +253,13 @@ html {
 	}
 }
 
-.achievementsContainer {
+.mainContentSection {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 90%;
-	height: 30%;
-	// border: 1px solid red;
+	height: 25%;
+	margin-bottom: 3%;
 	border-left: 1px solid black;
 	border-bottom: 1px solid black;
 
@@ -248,25 +268,29 @@ html {
 		align-items: center;
 		background-color: lightgrey;
 		font-size: 2.7rem;
-		height: 30%;
+		// height: 30%;
 
-		.expTitle {
+		.title {
 			padding-left: 3%;
 		}
 	}
 
-	.achievements {
+	.achievements,
+	.schools,
+	.quirk {
 		display: flex;
 		height: 100%;
 		flex-direction: column;
 		justify-content: space-around;
-		font-size: 2rem;
+		font-size: 1.5rem;
 
 		div {
 			// border: 1px solid red;
 			display: flex;
 			justify-content: space-between;
-			.season {
+			.season,
+			.year,
+			.qName {
 				padding-left: 3%;
 				width: 30%;
 
@@ -274,10 +298,19 @@ html {
 					font-style: italic;
 				}
 			}
-			.achievement {
+			.achievement,
+			.school,
+			.qDesc {
 				width: 70%;
 				text-align: left;
 			}
 		}
 	}
+}
+
+.educationContainer {
+	height: 10%;
+}
+.skillsContainer {
+	height: 60%;
 }
