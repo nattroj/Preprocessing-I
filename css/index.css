@@ -218,15 +218,34 @@ html {
   align-items: center;
 }
 .mainContent nav {
-  margin: 3% 0;
-  width: 90%;
   display: flex;
-  justify-content: space-between;
   font-size: 2rem;
+  justify-content: space-between;
+  width: 90%;
+  margin: 3% 0;
+}
+@media screen and (max-width: 500px) {
+  .mainContent nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
 }
 .mainContent nav a {
   color: #09261c;
   text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+  .mainContent nav a {
+    width: 100%;
+    text-align: center;
+    border: 3px solid black;
+    background-color: #09261c;
+    color: white;
+    padding: 1.5% 0;
+    margin: 1.5% 0;
+  }
 }
 @media screen and (max-width: 500px) {
   .mainContent {
@@ -258,6 +277,11 @@ html {
   margin-bottom: 1%;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
+}
+@media screen and (max-width: 500px) {
+  .mainContentSection {
+    margin: 3% 0;
+  }
 }
 .mainContentSection .titleContainer {
   display: flex;
